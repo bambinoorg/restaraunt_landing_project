@@ -52,7 +52,7 @@ body {
   color: #333333;
 }
 
-.statistics, .oriental_taste, .menu_list {
+.footer_inner_social, .footer_inner_item_between, .statistics, .oriental_taste, .menu_list {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -171,6 +171,10 @@ body {
   color: white;
   background-color: #b9951c;
   transition: all 0.2s linear;
+}
+
+.oriental_taste_content a {
+  padding: 20px 80px;
 }
 
 .btn_subscribe {
@@ -315,6 +319,96 @@ body {
   font-size: 1.5em;
   font-style: italic;
   opacity: 0.5;
+}
+
+.footer {
+  background: #303030;
+  padding: 250px 0;
+  width: 100%;
+}
+.footer_inner {
+  display: flex;
+  justify-content: space-between;
+  gap: 100px;
+}
+.footer_inner_item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 45%;
+}
+.footer_inner_item_between {
+  width: 55%;
+  gap: 20px;
+  align-items: flex-start;
+}
+.footer_inner_item_between_list {
+  display: flex;
+  flex-direction: column;
+}
+.footer_inner_item_between ul {
+  list-style: none;
+  width: 100%;
+}
+.footer_inner_item_between li {
+  width: 100%;
+  margin-bottom: 20px;
+  border-bottom: 2px solid transparent;
+  border-radius: 5px;
+}
+.footer_inner_item_between li:hover, .footer_inner_item_between li:focus {
+  border-bottom: 2px solid #f1f1f1;
+}
+.footer_inner_item_between a {
+  font-weight: 400;
+  color: #f1f1f1;
+  font-size: 1.5em;
+  line-height: 1.2;
+  text-decoration: none;
+}
+.footer_inner_social {
+  display: flex;
+  gap: 20px;
+  margin-top: 40px;
+}
+.footer_inner_social_item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  background: white;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.2s linear;
+}
+.footer_inner_social_item:hover, .footer_inner_social_item:focus {
+  transform: scale(1.2);
+  transition: all 0.2s linear;
+}
+.footer_inner_social_item:hover .footer_inner_social_icon {
+  fill: #ffc200;
+  transition: all 0.2s linear;
+}
+.footer_inner_social_icon {
+  width: 32px;
+  height: 32px;
+  fill: #333333;
+  transition: all 0.2s linear;
+}
+.footer_title {
+  font-weight: 700;
+  color: #f1f1f1;
+  text-transform: uppercase;
+  font-size: 1.56em;
+  line-height: 1.2;
+  margin-bottom: 40px;
+}
+.footer_text {
+  color: #f1f1f1;
+  font-size: 1.5em;
+  line-height: 1.2;
+  text-align: left;
 }
 
 /*# sourceMappingURL=main.css.map */
