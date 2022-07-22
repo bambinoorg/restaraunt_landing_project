@@ -1,0 +1,321 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*:before, :after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+.color_orange {
+  color: #ffc200;
+}
+
+.color_black {
+  color: #333333;
+}
+
+.color_white {
+  color: #f1f1f1;
+}
+
+.lenora_fields h2:nth-child(2), .section_header h2:nth-child(1) {
+  font-family: "Grand Hotel", cursive;
+  font-size: 4.6em;
+  line-height: 1.2;
+  font-weight: 400;
+  margin-bottom: 45px;
+}
+
+.menu_list_item h4 {
+  font-family: "Grand Hotel", cursive;
+  font-size: 2.5em;
+  line-height: 1.2;
+  color: #333333;
+  margin-top: 15px;
+}
+
+.lenora_fields p:nth-child(1), .section_header p:nth-child(2) {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.56em;
+  line-height: 1.2;
+  margin-top: 25px;
+}
+
+.menu_list_item p {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1em;
+  color: #333333;
+}
+
+.statistics, .oriental_taste, .menu_list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.statistics_item, .menu_list_item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.container {
+  width: 100%;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.header {
+  width: 90%;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.header_inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  margin: 35px auto;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+}
+.nav_link {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.6em;
+  color: #f1f1f1;
+  text-decoration: none;
+  border: 2px solid transparent;
+  border-radius: 5px;
+  padding: 5px;
+  margin-left: 60px;
+}
+.nav_link_search {
+  width: 30px;
+  height: 30px;
+  fill: #f1f1f1;
+  transition: all 0.2s linear;
+}
+.nav_link:hover {
+  transition: border 0.2s linear;
+  border: 2px solid #f1f1f1;
+}
+.nav_link:last-child {
+  transition: all 0.2s linear;
+  border: none;
+}
+.nav_link:last-child:hover {
+  transform: scale(1.3);
+  transition: all 0.2s linear;
+}
+.nav_link:first-child {
+  margin-left: 0;
+}
+.nav_link_search {
+  width: 30px;
+  height: 30px;
+}
+
+.intro {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+  height: 90vh;
+  background: url("../assets/img/Design.jpg") no-repeat center;
+  background-size: cover;
+}
+.intro_inner {
+  margin-right: 270px;
+}
+.intro_title {
+  font-size: 7.75em;
+  font-family: "Grand Hotel", cursive;
+  line-height: 1.2;
+  color: #ffc200;
+}
+.intro_text {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.8em;
+  color: #f1f1f1;
+  width: 100%;
+  max-width: 600px;
+  margin: 45px 0 75px 0;
+}
+
+.order_btn {
+  padding: 20px 56px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.18em;
+  font-weight: 700;
+  line-height: 1.2;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: black;
+  background-color: #ffc200;
+  border-radius: 4px;
+  transition: all 0.2s linear;
+}
+.order_btn:hover {
+  color: white;
+  background-color: #b9951c;
+  transition: all 0.2s linear;
+}
+
+.btn_subscribe {
+  border: none;
+  border-radius: 0;
+}
+
+.section {
+  margin: 0 auto;
+}
+
+.oriental_section {
+  background: #303030 url("../assets/img/Design_2.jpg");
+  background-size: cover;
+  width: 100%;
+}
+
+.statistics_section {
+  background: url("../assets/img/Design_3.jpg");
+  background-size: contain;
+  width: 100%;
+  padding-bottom: 150px;
+}
+
+.section_header {
+  text-align: center;
+  max-width: 895px;
+  width: 100%;
+  margin: 0 auto;
+}
+.subscribe {
+  background: url("../assets/img/Design_6.jpg");
+  background-size: contain;
+  width: 100%;
+  margin-top: 40px;
+}
+
+.rotate_180 {
+  transform: rotateZ(180deg);
+}
+
+.rotate_X_180 {
+  transform: rotateX(180deg);
+}
+
+.margin-top {
+  margin-top: 100px;
+}
+
+.margin-bottom {
+  margin-bottom: 100px;
+}
+
+.menu_list {
+  margin: 70px 0;
+}
+.menu_list_item {
+  width: 100%;
+  max-width: 250px;
+}
+.menu_list_item_img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+.oriental_taste {
+  height: auto;
+  padding: 100px 0;
+  gap: 150px;
+}
+.oriental_taste_img {
+  background-color: #333333;
+  border-radius: 50%;
+}
+.oriental_taste_img img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  border-radius: 50%;
+}
+.oriental_taste_content {
+  flex: 1 1 0;
+  width: 100%;
+}
+
+.statistics_item {
+  max-width: 260px;
+  max-height: 230px;
+  flex: 1 1 0;
+  border: 5px solid white;
+  border-radius: 50%;
+  padding: 75px 0;
+  margin-bottom: 100px;
+}
+.statistics_item_num {
+  font-size: 3.1em;
+  font-weight: 700;
+}
+.statistics_item_title {
+  font-size: 1.8em;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.lenora_fields {
+  background: #ffc200 url("../assets/img/Design_4.png") center no-repeat;
+  background-size: cover;
+  background-blend-mode: screen;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  height: 970px;
+}
+.lenora_fields_inner {
+  width: 100%;
+  max-width: 920px;
+  margin: 0 auto;
+}
+.lenora_fields p:nth-child(1) {
+  font-size: 3.12em;
+}
+.subscribe h2:nth-child(1) {
+  padding-top: 100px;
+}
+
+.subscribe_form {
+  margin-top: 80px;
+  padding-bottom: 200px;
+}
+.subscribe_form_email {
+  width: 100%;
+  max-width: 550px;
+  height: 60px;
+  border: none;
+  padding-left: 20px;
+}
+.subscribe_form_email:focus {
+  outline: 2px solid #ffc200;
+}
+.subscribe_form_email::placeholder {
+  font-size: 1.5em;
+  font-style: italic;
+  opacity: 0.5;
+}
+
+/*# sourceMappingURL=main.css.map */
