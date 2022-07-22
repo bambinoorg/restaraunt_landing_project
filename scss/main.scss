@@ -302,6 +302,7 @@ $orange_hover: #b9951c;
 //=================================Statistics==========================
 
 .statistics {
+
     &_item {
 
       max-width: 260px;
@@ -310,7 +311,6 @@ $orange_hover: #b9951c;
       border: 5px solid #ffff;
       border-radius: 50%;
       padding: 75px 0;
-      margin-bottom: 100px;
       @extend %flex_element_column;
 
         &_num {
