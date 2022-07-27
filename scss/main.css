@@ -1,14 +1,75 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
 * {
   margin: 0;
   padding: 0;
 }
 
-*:before, :after {
-  box-sizing: border-box;
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role=list],
+ol[role=list] {
+  list-style: none;
 }
 
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+:root {
+  --clr-bg-100:#f1f1f1;
+  --clr-bg-900:#333333;
+  --clr-text-100:#f1f1f1;
+  --clr-text-900:#333333;
+}
+
+@keyframes fixed_header_load {
+  0% {
+    top: -10%;
+  }
+  100% {
+    top: 0;
+  }
+}
 body {
   font-family: "Montserrat", sans-serif;
+}
+
+.lock {
+  overflow: hidden;
 }
 
 .color_orange {
@@ -23,9 +84,9 @@ body {
   color: #f1f1f1;
 }
 
-.lenora_fields h2:nth-child(2), .section_header h2:nth-child(1) {
+.modal_title, .lenora_fields h2:nth-child(2), .section_header h2:nth-child(1) {
   font-family: "Grand Hotel", cursive;
-  font-size: 4.6em;
+  font-size: 4.5rem;
   line-height: 1.2;
   font-weight: 400;
   margin-bottom: 45px;
@@ -33,23 +94,24 @@ body {
 
 .menu_list_item h4 {
   font-family: "Grand Hotel", cursive;
-  font-size: 2.5em;
+  font-size: 2.5rem;
   line-height: 1.2;
-  color: #333333;
+  color: var(--clr-text-900);
   margin-top: 15px;
 }
 
 .lenora_fields p:nth-child(1), .section_header p:nth-child(2) {
   font-family: "Montserrat", sans-serif;
-  font-size: 1.56em;
+  font-size: 1.5rem;
   line-height: 1.2;
   margin-top: 25px;
+  color: var(--clr-text-900);
 }
 
 .menu_list_item p {
   font-family: "Montserrat", sans-serif;
-  font-size: 1em;
-  color: #333333;
+  font-size: 1rem;
+  color: var(--clr-text-900);
 }
 
 .footer_inner_social, .footer_inner_item_between, .statistics, .oriental_taste, .menu_list {
@@ -87,9 +149,22 @@ body {
   margin: 35px auto;
 }
 
+.fixed_header {
+  width: 100%;
+  position: fixed;
+  height: 60px;
+  background: var(--clr-text-900);
+  animation: 2s fixed_header_load;
+}
+.fixed_header .header_inner {
+  margin: 0 auto;
+}
+
 .nav {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  padding: 5px 0;
 }
 .nav_link {
   font-family: "Montserrat", sans-serif;
@@ -177,9 +252,14 @@ body {
   padding: 20px 80px;
 }
 
+.menu_modal_btn {
+  padding: 20px 90px;
+}
+
 .btn_subscribe {
   border: none;
   border-radius: 0;
+  cursor: pointer;
 }
 
 .section {
@@ -409,6 +489,113 @@ body {
   font-size: 1.5em;
   line-height: 1.2;
   text-align: left;
+}
+
+.modal {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  top: 0;
+  left: 0;
+  opacity: 0;
+  visibility: hidden;
+  overflow-x: hidden;
+  overflow-y: auto;
+  transition: all 0.8s ease;
+}
+.modal_active {
+  opacity: 1;
+  visibility: visible;
+}
+.modal_body {
+  min-height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 10px;
+}
+.modal_content {
+  width: 100%;
+  max-width: 800px;
+  background: var(--clr-bg-100);
+  position: relative;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  transition: all 0.8s ease;
+  opacity: 0;
+  padding: 30px 10px;
+  transform: perspective(600px) translate(0px, -100%) rotateX(45deg);
+}
+.modal_active .modal_content {
+  transform: perspective(600px) translate(0px, 0) rotateX(0);
+  opacity: 1;
+}
+.modal_title {
+  font-family: "Grand Hotel", cursive;
+  text-align: center;
+  font-size: 4.5rem;
+  margin-bottom: 5px;
+  width: 100%;
+}
+.modal_close {
+  position: absolute;
+  top: -20px;
+  right: 15px;
+  background: transparent;
+  border: 0;
+  font-size: 4rem;
+  color: var(--clr-text-900);
+  transform: rotatez(45deg);
+  cursor: pointer;
+  transition: all 0.3s linear;
+}
+.modal_close:hover {
+  transform: rotatez(45deg) scale(1.2);
+  transition: all 0.3s linear;
+}
+.modal_list {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.modal_list_style[role=list] {
+  list-style-type: upper-roman;
+  position: relative;
+}
+.modal_item {
+  font-family: "Montserrat", sans-serif;
+  font-size: 2rem;
+  margin: 10px 0 10px 40px;
+}
+
+.change_theme {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  z-index: 2;
+  color: var(--clr-text-900);
+  border: 2px solid transparent;
+  margin-left: 0;
+}
+.change_theme:hover {
+  border: 2px solid var(--clr-text-900);
+}
+
+.dark {
+  background: var(--clr-bg-900);
+  color: var(--clr-text-100);
+}
+
+.light {
+  color: var(--clr-text-100);
+}
+
+.nav_link.light:hover {
+  border-color: var(--clr-text-100);
 }
 
 /*# sourceMappingURL=main.css.map */
