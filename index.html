@@ -9,9 +9,12 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Grand+Hotel&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="scss/main.css">
+	<link rel="stylesheet" href="scss/dark.css" media="(prefers-color-scheme: dark)">
+	<link rel="stylesheet" href="scss/light.css" media="(prefers-color-scheme: light)">
+
 	<title>Restaurant</title>
 </head>
-<body>
+<body class="change_theme">
 <!--Svg Sprites-->
 	<svg style="display: none">
 		<symbol id="search" viewBox="0 0 32 32">
@@ -59,34 +62,45 @@
 				</a>
 			</nav>
 		</div><!--	header_inner	-->
+		<fieldset class="switcher">
+			<legend class="switcher_legend">Change Scheme</legend>
+				<input class="switcher_radio switcher_radio--light" type="radio" name="color-scheme"
+				       value="light"
+				       aria-label="Light" checked>
+				<input class="switcher_radio switcher_radio--dark" type="radio" name="color-scheme"
+				       value="dark" aria-label="Dark">
+			<div class="switcher_status"></div>
+
+		</fieldset>
 	</header>
-<section class="intro">
+<section class="intro change_theme">
 	<div class="intro_inner">
 		<h1 class="intro_title">Title Here</h1>
 			<p class="intro_text">
 				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum.
 			</p>
 		<a href="#" class="order_btn">Order Now</a>
+		<a href="#" class="order_btn menu_modal_btn">Menu</a>
 	</div><!--intro_inner-->
 </section><!--intro-->
 
-<section class="section margin-top">
+<section class="section margin-top change_theme">
 	<div class="container">
 		<div class="section_header">
-			<h2 class="color_black">Best Seller</h2 >
-			<p class="color_black">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae
+			<h2 class="color_changer">Best Seller</h2 >
+			<p class="color_changer">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae
 			     vestibulum
 			   vestibulum.</p>
 		</div><!--section_header-->
 		<div class="menu_list">
 			<div class="menu_list_item">
-				<img class="menu_list_item_img" src="assets/img/food_1.jpg" alt="">
+				<img class="menu_list_item_img" src="assets/img/food_1.png" alt="">
 				<h4>Title Here</h4>
 				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
 			</div>
 
 			<div class="menu_list_item">
-				<img class="menu_list_item_img" src="assets/img/food_2.jpg" alt="">
+				<img class="menu_list_item_img" src="assets/img/food_2.png" alt="">
 				<h4>Title Here</h4>
 				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
 			</div>
@@ -100,11 +114,11 @@
 		</div>
 	</div><!--container-->
 </section><!--section-->
-<section class="oriental_section">
+<section class="oriental_section change_theme">
 	<div class="container">
 		<div class="oriental_taste">
 			<div class="oriental_taste_img">
-				<img src="assets/img/food_4.jpg" alt="">
+				<img src="assets/img/food_4.png" alt="">
 			</div>
 			<div class="oriental_taste_content">
 				<h1 class="intro_title">Oriental Taste</h1>
@@ -112,6 +126,7 @@
 					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum.
 				</p>
 				<a href="#" class="order_btn">Order Now</a>
+
 			</div><!--oriental_taste_content-->
 		</div><!--oriental_taste-->
 	</div><!--container-->
@@ -148,7 +163,7 @@
 		</div>
 	</div><!--container-->
 </section>
-<section class="oriental_section rotate_180 margin-bottom ">
+<section class="oriental_section rotate_180 margin-bottom change_theme ">
 	<div class="container">
 		<div class="oriental_taste rotate_180 ">
 			<div class="oriental_taste_content">
@@ -157,6 +172,7 @@
 					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum.
 				</p>
 				<a href="#" class="order_btn">Order Now</a>
+				<a href="#" class="order_btn menu_modal_btn">Menu</a>
 			</div><!--oriental_taste_content-->
 			<div class="oriental_taste_img">
 				<img src="assets/img/food_6.png" alt="">
@@ -176,8 +192,8 @@
 
 <section class="section subscribe margin-bottom">
 	<div class="section_header">
-		<h2 class="color_black">Subscribe</h2 >
-		<p class="color_black">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum .</p>
+		<h2 class="color_changer">Subscribe</h2 >
+		<p class="color_changer">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum .</p>
 		<form action="" class="subscribe_form">
 			<input type="text" placeholder="Your Email" class="subscribe_form_email" >
 			<button type="submit" class="order_btn btn_subscribe" >Subscribe</button>
@@ -260,14 +276,12 @@
 			</div>
 		</div>
 		</div><!--footer_inner-->
->>>>>>>>> Temporary merge branch 2
 	</footer>
 
 <div id="modal" class="modal">
 	<div class="modal_body">
 		 <div class="modal_content">
 			 <button class="modal_close ">+</button>
-			 <a href="" class="nav_link change_theme" >Change Theme</a>
 			 <h4 class="modal_title">Menu</h4>
 			 <div class="modal_list">
 				 <h4 class="modal_title">Hot</h4>

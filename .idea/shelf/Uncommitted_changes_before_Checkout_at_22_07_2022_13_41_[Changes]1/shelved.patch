@@ -1,0 +1,17 @@
+Index: scss/main.scss
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/scss/main.scss b/scss/main.scss
+--- a/scss/main.scss	
++++ b/scss/main.scss	
+@@ -433,7 +433,7 @@
+           }
+         @extend %flex_element_space_between;
+         align-items: flex-start;
+-        
++
+       }
+         &_social {
+             display: flex;

@@ -1,0 +1,52 @@
+Index: .idea/workspace.xml
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	
++++ b/.idea/workspace.xml	
+@@ -4,10 +4,7 @@
+     <option name="autoReloadType" value="SELECTIVE" />
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="87fc1821-ca2d-41e4-a534-927ff9dee3ea" name="Changes" comment="okay">
+-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/scss/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/scss/main.css" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/scss/main.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/scss/main.css.map" afterDir="false" />
++    <list default="true" id="87fc1821-ca2d-41e4-a534-927ff9dee3ea" name="Changes" comment="Complete all of landing">
+       <change beforePath="$PROJECT_DIR$/scss/main.scss" beforeDir="false" afterPath="$PROJECT_DIR$/scss/main.scss" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+@@ -55,7 +52,7 @@
+       <updated>1658480495259</updated>
+       <workItem from="1658480496528" duration="498000" />
+       <workItem from="1658481012349" duration="497000" />
+-      <workItem from="1658481525506" duration="4505000" />
++      <workItem from="1658481525506" duration="4842000" />
+     </task>
+     <task id="LOCAL-00001" summary="okay">
+       <created>1658481360541</created>
+@@ -64,7 +61,14 @@
+       <option name="project" value="LOCAL" />
+       <updated>1658481360541</updated>
+     </task>
+-    <option name="localTasksCounter" value="2" />
++    <task id="LOCAL-00002" summary="Complete all of landing">
++      <created>1658486401036</created>
++      <option name="number" value="00002" />
++      <option name="presentableId" value="LOCAL-00002" />
++      <option name="project" value="LOCAL" />
++      <updated>1658486401037</updated>
++    </task>
++    <option name="localTasksCounter" value="3" />
+     <servers />
+   </component>
+   <component name="TypeScriptGeneratedFilesManager">
+@@ -83,6 +87,7 @@
+   </component>
+   <component name="VcsManagerConfiguration">
+     <MESSAGE value="okay" />
+-    <option name="LAST_COMMIT_MESSAGE" value="okay" />
++    <MESSAGE value="Complete all of landing" />
++    <option name="LAST_COMMIT_MESSAGE" value="Complete all of landing" />
+   </component>
+ </project>
+\ No newline at end of file

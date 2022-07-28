@@ -1,0 +1,12 @@
+:root {
+    --clr-bg-100:#f1f1f1;
+    --clr-text-900:#2f2f2f;
+}
+
+.switcher_radio {
+    filter: invert(0);
+
+}
+.switcher_radio:checked {
+    filter: invert(1);
+}

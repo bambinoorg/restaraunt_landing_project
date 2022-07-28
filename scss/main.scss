@@ -5,21 +5,13 @@
 
 body {
   font-family: fonts.$mr;
+  background: #2f2f2f;
+  transition: all 0.2s linear;
 }
 .lock {
   overflow: hidden;
 }
 
-//=================================Colors_class==========================
-.color_orange {
-  color: colors.$orange;
-}
-.color_black {
-  color: colors.$black;
-}
-.color_white {
-  color: colors.$white;
-}
 //==============================%Samples============================
 %h2_style {
   font-family: fonts.$gh;
@@ -27,6 +19,7 @@ body {
   line-height: 1.2;
   font-weight: 400;
   margin-bottom:45px ;
+
 }
 %h4_style {
   font-family: fonts.$gh;
@@ -40,7 +33,6 @@ body {
   font-size: fonts.$fs-150-;
   line-height: 1.2;
   margin-top: 25px;
-  color: var(--clr-text-900);;
 }
 
 %p_menu_list_style {
@@ -78,7 +70,6 @@ body {
   top: 0;
   left: 50%;
   transform: translateX(-50%);
-
     &_inner {
       display: flex;
       justify-content: space-between;
@@ -91,8 +82,9 @@ body {
 .fixed_header {
   width: 100%;
   position: fixed;
+  z-index: 100;
   height: 60px;
-  background: var(--clr-text-900);
+  background: colors.$black;
   animation: 2s fixed_header_load ;
     & .header_inner {
       margin: 0 auto;
@@ -113,7 +105,7 @@ body {
      border: 2px solid transparent;
      border-radius: 5px;
      padding: 5px;
-     margin-left: 60px ;
+     margin-left: 50px ;
          &_search {
            width: 30px;
            height: 30px;
@@ -124,12 +116,12 @@ body {
            transition: border .2s linear;
            border: 2px solid  colors.$white;
         }
-     &:last-child {
+     &:nth-child(6) {
 
        transition: all .2s linear;
        border: none;
      }
-     &:last-child:hover {
+     &:nth-child(6):hover {
        transform: scale(1.3);
        transition: all .2s linear;
      }
@@ -142,10 +134,91 @@ body {
       height: 30px;
   }
 }
+// Switcher scheme
+.switcher {
+  margin-left: auto ;
+  padding: 1px 0;
+  width: 100%;
+  max-width: 100px;
+  display: grid;
+  grid-template-columns: 1fr  1fr;
+  border: 2px solid colors.$orange;
+  border-radius:20px ;
+  position: relative;
+  overflow: hidden;
+    &_legend {
+      position: absolute;
+      opacity: 0;
+      pointer-events: none;
+    }
+    &_label {
+      color: colors.$white;
+      font-size: 1.6em ;
+      width: 100%;
+    }
+  &_radio {
+    appearance: none;
+    margin: 0;
+    width: 40px;
+    height: 40px;
+    border: none;
+    background-position: center;
+    background-repeat:no-repeat ;
+    background-size: 30px;
+    transition: filter 0.1s ease-in;
+      &:focus {
+        outline: none;
+      }
+    &--light {
+      grid-column: 1 / 2;
+
+      background-image: url("../assets/img/svg/light.svg");
+
+    }
+    &--dark {
+      grid-column: 2 / 3;
+      justify-self: end;
+      margin-right: 3px;
+
+      transform: rotateZ(330deg);
+      background-image: url("../assets/img/svg/dark.svg");
+    }
+  }
+  &_status {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 1px;
+    transition: all .3s ease-in;
+
+
+    bottom: 0;
+    background: #000;
+    z-index: -1;
+    border-radius: 50%;
+
+  }
+}
+
+.switcher_radio {
+  filter: invert(0);
+
+}
+.switcher_radio:checked {
+  filter: invert(1);
+}
+
+.switcher_radio--light:checked ~.switcher_status {
+
+}
+
+.switcher_radio--dark:checked ~ .switcher_status {
+  transform: translateX(135%);
+}
 
 
 
-//=============================INTRO Section==========================
+  //=============================INTRO Section==========================
 
 .intro {
   display: flex;
@@ -213,19 +286,22 @@ body {
 //=======================Sections============================
 .section {
   margin: 0 auto;
+  transition: all 0.2s linear;
 
 }
 .oriental_section {
-  background: #303030 url("../assets/img/Design_2.jpg") ;
+  background: var(--clr-bg-100) url("../assets/img/Design_2.png") ;
   background-size: cover ;
   width: 100%;
+  transition: all 0.2s linear;
 
 }
 .statistics_section {
-  background: url("../assets/img/Design_3.jpg");
+  background: colors.$black  url("../assets/img/Design_3.png");
   background-size: contain ;
   width: 100%;
   padding-bottom: 150px;
+  transition: all 0.2s linear;
 
 }
 .section_header {
@@ -234,8 +310,7 @@ body {
   width: 100%;
   margin: 0 auto;
   & h2:nth-child(1) {
-
-    @extend %h2_style
+    @extend %h2_style;
   }
   & p:nth-child(2) {
     @extend %section_header_p_style
@@ -243,10 +318,12 @@ body {
 }
 
 .subscribe {
-  background: url("../assets/img/Design_6.jpg") ;
+  background:var(--clr-bg-100) url("../assets/img/Design_3.png") ;
+
   background-size: contain ;
   width: 100%;
   margin-top: 40px;
+  transition: all 0.2s linear;
 }
 
 //margins & rotates
@@ -366,9 +443,11 @@ body {
     & p:nth-child(1) {
       font-size: 3.12em;
       @extend %section_header_p_style;
+      color: colors.$black;
     }
     & h2:nth-child(2) {
       @extend  %h2_style;
+      color: colors.$black;
     }
 
 }
@@ -399,7 +478,7 @@ body {
 
 //===============================footer====================================
 .footer {
-  background: #303030;
+  background: #2f2f2f;
   padding: 250px 0;
   width: 100%;
     &_inner {
@@ -514,6 +593,7 @@ body {
   visibility: hidden;
   overflow-x: hidden;
   overflow-y: auto;
+  z-index: 1000;
 
   transition: all .8s ease ;
     &_active {
@@ -531,6 +611,7 @@ body {
       width: 100%;
       max-width: 800px;
       background: var(--clr-bg-100);
+      color: var(--clr-text-900);
       position: relative;
       display: flex;
       justify-content: center;
@@ -598,26 +679,23 @@ body {
    }
 
 }
-//===========================Menu theme toggle================
+//===========================change_theme ================
+
 .change_theme {
-  position: absolute;
-  top: 5px;
-  left: 5px;
-  z-index: 2;
+  background-color: var(--clr-bg-100);
+}
+
+
+//=================================Colors_class==========================
+.color_changer {
   color: var(--clr-text-900);
-  border: 2px solid transparent;
-  margin-left: 0;
-    &:hover {
-      border: 2px solid var(--clr-text-900);
-    }
 }
-.dark {
-  background: var(--clr-bg-900);
-  color: var(--clr-text-100);
+.color_orange {
+  color: colors.$orange;
 }
-.light {
-  color: var(--clr-text-100);
+.color_black {
+  color: colors.$black;
 }
-.nav_link.light:hover {
-  border-color: var(--clr-text-100);
+.color_white {
+  color: colors.$white;
 }

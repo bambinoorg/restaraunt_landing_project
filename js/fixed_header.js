@@ -1,5 +1,5 @@
 
-
+const header = document.querySelector('header');
 window.addEventListener('scroll',() => {
     let introH = window.scrollY;
     if(introH > 870) {
